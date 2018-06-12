@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Page Title</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />  
+</head> 
+<body> 
+    <div class="scrolls-with-user">  <!-- if user is not at top of page this "scrols-with-user" will become transparent (via opacity) -->
+        <div class="logo">  
+            <p> 
+                <a href="https://bh0.github.io">BH0</a> 
+            </p>
+        </div>
+
+        <div class="links"> 
+            <div class="nav">
+                <nav> 
+                    <!-- only shows if user has scrolled below the corrosponding section -->  
+                    <a id="up-icon" href="#about-me"><i class="fas fa-chevron-up"></i></a> 
+                    <!-- endif -->                     
+                    <a id="projects-link" href="#projects">Projects</a> <!-- "My Work" --> 
+                    <a id="contact-link" href="#contact">Contact</a> 
+                    <!-- <a id="skills-link" href="#skills">Skills</a> --> 
+                </nav> 
+            </div> 
+            <div class="social-links"> <!-- replace these with [Font awesome] icons -->
+                <a href="#github-icon"><i class="fab fa-github"></i></a> 
+                <a href="#linkedin-icon"><i class="fab fa-linkedin-in"></i></a> 
+                <!-- <a href="#">Twitter</a> --> 
+            </div> 
+        </div>     
+    </div> 
+    
+    <scroll-container> 
+        <scroll-page id="about-me">
+            <div class="about-me"> 
+                <h2>About Me</h2> 
+                <p> 
+                    <!-- about me -->  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero nostrum natus distinctio sit, quo sapiente dolores at eveniet minus soluta. Fugiat magnam deserunt repellat perspiciatis beatae esse distinctio quis ducimus.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero nostrum natus distinctio sit, quo sapiente dolores at eveniet minus soluta. Fugiat magnam deserunt repellat perspiciatis beatae esse distinctio
+                    <a href="#">Contact me</a>
+                </p> 
+            </div> 
+        </scroll-page> 
+        <scroll-page id="projects">
+            <div class="projects-container"> 
+                <h2>Projects</h2> <!-- "My Work" -->
+                <div class="projects"> 
+                    <!-- each portfolio block will slide through images of the project -->         
+                    <div id="project-1"> 
+                        <!-- <a href="#"> --> 
+                            <img src=""> 
+                        <!-- </a> --> 
+                    </div> 
+                    <div id="project-2"> 
+                        <a href="#"> 
+                            <img src=""> 
+                        </a> 
+                    </div> 
+                    <div id="project-3"> 
+                        <a href="#"> 
+                            <img src=""> 
+                        </a> 
+                    </div> 
+                    <div id="project-4"> 
+                        <a href="#"> 
+                            <img src=""> 
+                        </a> 
+                    </div> 
+                    <div id="project-5"> 
+                        <a href="#"> 
+                            <img src=""> 
+                        </a> 
+                    </div> 
+                    <div id="project-6"> 
+                        <a href="#"> 
+                            <img src=""> 
+                        </a> 
+                    </div>                                                                                    
+                </div> 
+            </div> 
+        </scroll-page> 
+        
+        <scroll-page id="contact"> 
+            <div class="contact"> 
+                <!-- contact form --> 
+                <h2>Contact Me</h2> 
+                <div class="container">
+                    <form action="">
+                        <label for="fullname">Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        <input type="submit" value="Send"> 
+                    </form> 
+                </div>
+            </div> 
+        </scroll-page> 
+
+        <div class="footer"> 
+            <footer> 
+                &copy; 2018 BH0  
+            </footer> 
+        </div> 
+    </scroll-container> 
+
+    <!-- Scripting --> 
+    <script src="main.js"></script>  
+</body>
+</html> 
+

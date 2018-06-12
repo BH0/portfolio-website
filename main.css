@@ -1,0 +1,236 @@
+/* Reset */ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/  
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, /* a, */ 
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu /*, nav */ , output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, section {
+	display: block;
+}
+ol, ul {
+	list-style: nosne;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table { 
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Reset */ 
+
+/*  General  */ 
+body { 
+	line-height: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scrolls-with-user { 
+    position: fixed; 
+    z-index: 1; 
+} 
+
+.about-me, .projects { 
+    padding-bottom: 1em; 
+} 
+
+h2 { 
+    /* display: block; */ 
+    font-size: 1.5em;
+    /* margin-top: 0.83em; */ 
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+
+    text-align: center; 
+    padding: 2px 2px 2px 2px; 
+    color: #333; 
+} 
+
+/* Logo ["BH0"] */ 
+.logo { 
+    position: static; 
+    display: inline; 
+} 
+.logo p a { 
+    color: rgb(68, 68, 68); 
+    transition: color 2s, text-decoration 2s; 
+    font-size: 3em; 
+    font-weight: 100; 
+    padding-left: 1.25em; 
+    text-decoration: none; 
+    float: left; 
+} 
+.logo a:hover { 
+    color: rgb(250, 238, 75); 
+    text-decoration: underline;     
+}
+
+/* Top Level Navigation */ 
+    /* 
+    When the user is no longer at the top of the page, the "em" values will be reduced by half 
+    */ 
+.links { 
+    position: fixed; 
+    right: 1em; 
+    float: right; 
+    height: 10em; 
+
+    /* Not sure if I like this  
+    background-color: rgb(121, 121, 121); 
+    opacity: 0.02; 
+    filter: alpha(opacity=2); 
+    */ 
+
+} 
+
+/* This CSS allows the "scroll-to-element" happen [thanks to related HTML] */ 
+/* See: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior */ 
+scroll-container { /* [Responsiveness] Has not been tested on phyhsical mobile device */ 
+    display: block; 
+    width: 83em; 
+    height: 1000px; 
+    overflow-y: scroll;
+    scroll-behavior: smooth; 
+    margin: 0;
+	padding: 0;
+	border: 0;
+} 
+.links nav { 
+    padding-right: 5em; 
+    padding-top: 1.2em; 
+} 
+.links a { 
+    font-size: 2em; 
+    color: #333; /* #333 */  
+    padding: 5px 10px 10px 5px; 
+    text-decoration: none; 
+    /* float: right; */ 
+} 
+.social-links { 
+    padding-top: 0.8em; 
+    position: absolute; 
+    padding-right: 3em; 
+    right: 6em; 
+} 
+.social-links a:first-of-type { 
+    padding-left: 2em; 
+} 
+
+/* About me */ 
+.about-me h2 { 
+    position: absolute; 
+    margin-left: 25em; 
+    margin-right: 25em; 
+    margin-top: 6em; 
+} 
+.about-me p { 
+    text-align: center; 
+    font-size: 1.2em; 
+    padding: 10em 5em 2em 5em; 
+    background-color: #cecece; /* rgb(185, 185, 185); */ 
+} 
+.about-me a { 
+    color: #333; 
+    font-weight: bolder; 
+    font-size: 1.1em; 
+} 
+
+/* Projects */ 
+.projects { 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    text-align: center; 
+} 
+
+.projects div { 
+    overflow: hidden; 
+    position: relative; 
+    padding: 0; 
+    vertical-align: middle;     
+    flex-grow: 1;
+    width: 33%; 
+    /* height: 100px; */ 
+} 
+.projects div img { 
+    /* transition: all ease-in-out .4s; */ 
+    width: 24em; /* width: 90%; /* 100% */ 
+    height: 16em; 
+} 
+
+/* Contact */ 
+/* Style inputs with type="text", select elements and textareas */
+.contact label { 
+    font-size: 1.5em; 
+}
+.contact input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical;  /* Allow the user to vertically resize the textarea (not horizontally) */
+    font-size: 1.4em; 
+} 
+
+/* Style the submit button with a specific background color etc */
+.contact input[type=submit] {
+    background-color: #333;
+    color: #cecece;
+    padding: 12px 30px; 
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.contact input[type=submit]:hover { 
+    background-color: #333;
+} 
+
+/* Add a background color and some padding around the form */
+.contact .container {
+    border-radius: 5px;
+    background-color: #cecece;
+    padding-top: 2em; 
+    padding-right: 4em; 
+    padding-left: 4em; 
+} 
+
+.footer { 
+    background-color: darkgrey; 
+    text-align: center; 
+    padding: 1.2em 1.2em 1.2em 1.2em; 
+} 
