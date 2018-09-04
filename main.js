@@ -44,24 +44,24 @@ document.querySelector("#contact-link").addEventListener("click", () => {
 
 /// Projects 
 let projectOneImages, projectTwoImages, projectThreeImages, projectFourImages, projectFiveImages, projectSixImages; 
-projectOneImages = ["images/drums-view.png",
-"images/post-drum.png",
-"images/drumtree-signin.png"]; 
+projectOneImages = ["images/drums-view.PNG",
+"images/post-drum.PNG",
+"images/drumtree-signin.PNG"]; 
 projectTwoImages = ["images/restauranta-top.png", 
-"images/restauranta-dishes.png",
-"images/restauranta-contact.png"]; 
-projectThreeImages = ["images/section1.png",
-"images/section2.png",
-"images/landing.png"]; 
-projectFourImages = ["images/search.png",
-"images/kits.png",
-"images/kit-submission.png"]; 
+"images/restauranta-dishes.PNG",
+"images/restauranta-contact.PNG"]; 
+projectThreeImages = ["images/section1.PNG",
+"images/section2.PNG",
+"images/landing.PNG"]; 
+projectFourImages = ["images/search.PNG",
+"images/kits.PNG",
+"images/kit-submission.PNG"]; 
 projectFiveImages = ["images/editori2.png",
 "images/editori2.png",
 "images/editori1.png"]; 
-projectSixImages = ["images/pokemon-to-catch.png",
-"images/pokemon-to-catch.png", 
-"images/pokemon-to-catch2.png"]; 
+projectSixImages = ["images/pokemon-to-catch.PNG",
+"images/pokemon-to-catch.PNG", 
+"images/pokemon-to-catch2.PNG"]; 
 
 let imageNumber = 0; 
 function changeImage() { 
