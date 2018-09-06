@@ -44,7 +44,7 @@
                 <h2>About Me</h2> 
                 <p> 
                     <!-- about me --> A technology-agnostic software developer who's primary motivaiton is the sense of accomplishment and altruism. 
-                    <a href="#">Contact me</a>
+                    <a href="#contact">Contact me</a>
                 </p> 
             </div> 
         </scroll-page> 
@@ -93,11 +93,13 @@
                 <h2>Contact Me</h2> 
                 <div class="container">
                     <form action="">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
                         <label for="fullname">Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <input type="text" id="fullname" name="name" placeholder="Tell me who you are...">
                         <label for="subject">Subject</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                        <input type="submit" value="Send"> 
+                        <textarea id="subject" name="subject" placeholder="Tell me something I will care about..." style="height:200px"></textarea>
+                        <input id="submit" type="submit" value="Send"> 
                     </form> 
                 </div>
             </div> 
@@ -111,6 +113,7 @@
     </scroll-container> 
 
     <!-- Scripting --> 
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script> 
     <script src="main.js"></script>  
 </body>
 </html> 

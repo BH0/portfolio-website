@@ -89,3 +89,32 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(changeImage, 1200); 
 });  
 
+
+/// Contact Form 
+// Initialize Firebase
+let config = {
+apiKey: "AIzaSyAVMWjsSGuU3uYpzV8q7kzUp4FoSTJDgJw",
+authDomain: "portfolio-website-7c83b.firebaseapp.com",
+databaseURL: "https://portfolio-website-7c83b.firebaseio.com",
+projectId: "portfolio-website-7c83b",
+storageBucket: "",
+messagingSenderId: "420237444821"
+};
+firebase.initializeApp(config);
+
+let firebaseRef = firebase.database().ref("emails"); 
+let submit = document.querySelector("#submit"); 
+let fullnameField = document.querySelector("#fullname"); 
+let subjectField = documnet.querySelector("#subject"); 
+let emailField = documnet.querySelector("#email"); 
+
+submit.addEventListener("click", e => { 
+    e.preventDefault(); 
+    let email = { 
+        name: fullnameField.value, 
+        subect: subjectField.vale, 
+        body: emailField.value // the email 
+    } 
+    let ref = firebaseRef.push(); 
+    ref.set(email);      
+}); 
