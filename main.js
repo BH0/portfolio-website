@@ -1,3 +1,36 @@
+/// Contact Form 
+// Initialize Firebase
+let config = {
+    apiKey: "AIzaSyAVMWjsSGuU3uYpzV8q7kzUp4FoSTJDgJw",
+    authDomain: "portfolio-website-7c83b.firebaseapp.com",
+    databaseURL: "https://portfolio-website-7c83b.firebaseio.com",
+    projectId: "portfolio-website-7c83b",
+    storageBucket: "portfolio-website-7c83b.appspot.com",
+    messagingSenderId: "420237444821"
+} 
+firebase.initializeApp(config);
+
+let firebaseRef = firebase.database().ref("emails"); 
+let submit = document.querySelector("#submit"); 
+let fullnameField = document.querySelector("#fullname"); 
+let subjectField = document.querySelector("#subject"); 
+let emailField = document.querySelector("#email"); 
+
+submit.addEventListener("click", e => { 
+    e.preventDefault(); 
+    let email = { 
+        name: fullnameField.value, 
+        subect: subjectField.value, 
+        body: emailField.value // the email 
+    } 
+    let ref = firebaseRef.push(); 
+    console.log(email); 
+    ref.set(email);      
+    fullnameField.value = ""; 
+    subjectField.value = ""; 
+    emailField.value = ""; 
+}); 
+
 /// Scroll To Element 
 /* Accomplished  using CSS + HTML (scroll-container & scroll-page) */ 
 
@@ -90,31 +123,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });  
 
 
-/// Contact Form 
-// Initialize Firebase
-let config = {
-apiKey: "AIzaSyAVMWjsSGuU3uYpzV8q7kzUp4FoSTJDgJw",
-authDomain: "portfolio-website-7c83b.firebaseapp.com",
-databaseURL: "https://portfolio-website-7c83b.firebaseio.com",
-projectId: "portfolio-website-7c83b",
-storageBucket: "",
-messagingSenderId: "420237444821"
-};
-firebase.initializeApp(config);
-
-let firebaseRef = firebase.database().ref("emails"); 
-let submit = document.querySelector("#submit"); 
-let fullnameField = document.querySelector("#fullname"); 
-let subjectField = documnet.querySelector("#subject"); 
-let emailField = documnet.querySelector("#email"); 
-
-submit.addEventListener("click", e => { 
-    e.preventDefault(); 
-    let email = { 
-        name: fullnameField.value, 
-        subect: subjectField.vale, 
-        body: emailField.value // the email 
-    } 
-    let ref = firebaseRef.push(); 
-    ref.set(email);      
-}); 
